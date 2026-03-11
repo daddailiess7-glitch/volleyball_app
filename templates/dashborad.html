@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coach Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+<h1>🎯 Coach Dashboard</h1>
+
+<h3>Add New Player</h3>
+<form action="/add_player" method="post">
+<input name="name" placeholder="Player name" required>
+<button>Add Player</button>
+</form>
+
+<h3>Attendance Table</h3>
+<table>
+<tr><th>Player</th><th>Date</th><th>Status</th></tr>
+{% for row in attendance %}
+<tr>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[3]}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/export"><button>Export Excel</button></a>
+<a href="/"><button>Back to Player View</button></a>
+</div>
+</body>
+</html>

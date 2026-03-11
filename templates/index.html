@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Volleyball Attendance</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+<h1>🏐 Volleyball Attendance</h1>
+
+<form action="/attendance" method="post">
+<select name="player" required>
+<option value="">Choose Player</option>
+{% for player in players %}
+<option>{{player[0]}}</option>
+{% endfor %}
+</select>
+
+<select name="status" required>
+<option value="Present">Present</option>
+<option value="Absent">Absent</option>
+</select>
+
+<button type="submit">Register</button>
+</form>
+
+<a href="/dashboard"><button>Coach Dashboard</button></a>
+</div>
+</body>
+</html>

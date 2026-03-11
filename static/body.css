@@ -1,0 +1,43 @@
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.container{
+background:white;
+color:black;
+padding:20px;
+border-radius:15px;
+max-width:400px;
+margin:auto;
+}
+
+button{
+padding:10px;
+margin-top:10px;
+width:100%;
+border:none;
+border-radius:8px;
+background:#ff6b00;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#e65c00;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th, td{
+border:1px solid #ccc;
+padding:8px;
+}
